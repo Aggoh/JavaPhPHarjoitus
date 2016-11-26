@@ -1,5 +1,5 @@
 <?php
-session_start();  
+include('navbar.php');
 require_once("/home/K7182/dbconfig/db-init.php");
 require_once("/home/K7182/pwconfig/PasswordLib.phar");
 $lib = new PasswordLib\PasswordLib();

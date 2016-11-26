@@ -5,6 +5,6 @@ if(isset($_SESSION['CurrentUser'])) {
     unset($_SESSION['CurrentUser']);
 }
  
-header('Location: indeex.php');
+header('Location: ../indeex.php');
 exit;
 ?>

@@ -16,21 +16,31 @@ $sql = <<<SQLEND
 INSERT INTO kayttajat(tunnus, salasana)
 VALUES (:f1, :f2)
 SQLEND;
-
-
-if ($row != 0 ){
-    echo '<script language="javascript">';
-	echo 'alert("Username taken, choose another one.")';
+if(preg_match("/.+/",$tunnus) AND preg_match("/.+/",$salasana)){
+	if ($row != 0 ){
+		echo '<script language="javascript">';
+		echo 'alert("Username taken, choose another one.")';
+		echo '</script>';
+		include 'empty_form.php';
+	}
+	else{ 
+		echo '<script language="javascript">';
+		echo 'alert("Account succesfully created.")';
+		echo '</script>';
+		$stmt = $db->prepare($sql);
+		$stmt->execute(array(
+		':f1' => $tunnus, 
+		':f2' => $hash));
+		echo $stmt->rowCount() . "Succesfully created!";
+		include('../indeex.php');
+	}
+}
+else {
+	echo '<script language="javascript">';
+	echo 'alert("Username/password needs to be at least 1 character long.")';
 	echo '</script>';
-	include 'empty_form.php';
+	include('empty_form.php');
 }
-else{ 
-$stmt = $db->prepare($sql);
-$stmt->execute(array(
-':f1' => $tunnus, 
-':f2' => $hash));
-echo $stmt->rowCount() . "Succesfully created!";	
 
-header('Location: ../indeex.php');
-}
+
 ?>

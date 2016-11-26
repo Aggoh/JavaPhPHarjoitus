@@ -1,3 +1,7 @@
+<?php
+session_start();
+if (isset ['CurrentUser'])
+?>
 <html>
 <head>
 	<title>LounasMenu</title>
@@ -11,6 +15,7 @@
 	
 </head>
 <body onload="start()">
+<?php include('navbar.php'); ?>
 	<header>  
         <nav class="navbar navbar-custom col-md-6" role="navigation">
 				

@@ -11,6 +11,7 @@
 	
 </head>
 <body onload="start()">
+<?php include('navbar.php'); ?>
 	<header>  
         <nav class="navbar navbar-custom col-md-6" role="navigation">
            <ul class="lista nav nav-pills">  
