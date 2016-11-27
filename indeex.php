@@ -1,12 +1,5 @@
 <html>
 	<head>
-		<title>LounasMenu</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="css/font-awesome.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="icon" type="image/png" href="img/icon.png">
 		<script src="js/lunch_menu.js"></script>
 	</head>
 <body onload="start()">

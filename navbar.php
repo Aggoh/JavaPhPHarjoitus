@@ -1,4 +1,11 @@
 <html>
+<title>LounasMenu</title>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" type="image/png" href="img/icon.png">
 <?php
 session_start();
 if(isset($_SESSION['CurrentUser'])){
@@ -8,7 +15,7 @@ if(isset($_SESSION['CurrentUser'])){
 				<ul class="lista nav nav-pills"> 
 					<li class="navbar-text pull-left welcome">
 					Welcome  {$_SESSION['CurrentUser']}	</li>	
-					<li><a href="./indeex.php"> <i class="fa fa-home fa-1x" > </i> Home </a></li>
+					<li><a href="./index_secure.php"> <i class="fa fa-home fa-1x" > </i> Home </a></li>
 					<li><a href="./profile.php"> <i class="fa fa-user fa-1x"> </i> Profile</a></li>
 					<li><a href="./php/logout.php"> <i class="fa fa-sign-out fa-1x"> </i> </i> Log Out</a></li> 
 				</ul>  

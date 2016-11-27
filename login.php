@@ -3,7 +3,7 @@ include('navbar.php');
 require_once("/home/K7182/dbconfig/db-init.php");
 require_once("/home/K7182/pwconfig/PasswordLib.phar");
 $lib = new PasswordLib\PasswordLib();
-include 'Form.php';
+include 'php/Form.php';
 // username ja password muuttujat
 $tunnus   = isset($_REQUEST['username']) ? $_REQUEST['username']:'';
 $salasana = isset($_REQUEST['password']) ? $_REQUEST['password'] : '';
@@ -19,7 +19,7 @@ if(isset($_POST['Login']))
 {	
 	if ($stmt->rowCount() == 1 AND $lib->verifyPasswordHash($salasana, $row['salasana'])){	
 		$_SESSION['CurrentUser'] = $tunnus;  // luo sessio		
-		header('Location: indeex.php');
+		header('Location: index_secure.php');
         exit;			
 		}
 		else{
