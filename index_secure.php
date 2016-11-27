@@ -1,5 +1,18 @@
 <?php
 require_once('arviointi.php');
+require_once('/home/K7182/dbconfig/db-init.php');
+
+$statement = $db->query('SELECT AVG(rating) as average FROM arvostelut where ravintola="aimo"');
+$result = $statement->fetchObject();
+$averageA = $result->average;
+
+$statement = $db->query('SELECT AVG(rating) as average FROM arvostelut where ravintola="bitti"');
+$result = $statement->fetchObject();
+$averageB = $result->average;
+
+$statement = $db->query('SELECT AVG(rating) as average FROM arvostelut where ravintola="poliisi"');
+$result = $statement->fetchObject();
+$averageP = $result->average;
 ?>
 <html>
 <head>
@@ -30,7 +43,7 @@ require_once('arviointi.php');
 			<h1>Aimo</h1>
             <img src="img/aimo.jpg" height="150" width="300" alt="" /><br>			
 			<a class="" data-toggle="collapse" data-parent="#accordion" href="#a-rate">Arvostele!</a> <br>
-			<span id="arvostelut">rating</span> <br>
+			<span id="arvostelut">rating <?php echo round($averageA,2) ?>/5</span> <br>
 			<div class="panel-collapse collapse" id="a-rate">
 				<?php AsetaRavintola("aimo");?>
 			</div>
@@ -41,7 +54,7 @@ require_once('arviointi.php');
 			<h1>Bittipannu</h1>
             <img src="img/bitti.jpg" height="150" width="300" alt="" />  <br>
 			<a class="" data-toggle="collapse" data-parent="#accordion" href="#b-rate">Arvostele!</a> <br>
-			<span id="arvostelut">rating</span>  <br>
+			<span id="arvostelut">rating <?php echo round($averageB,2) ?>/5</span>  <br>
 			<div class="collapse" id="b-rate">
 				<?php AsetaRavintola("bitti");?>
 			</div>	
@@ -52,7 +65,7 @@ require_once('arviointi.php');
 			<h1>Poliisilaitos</h1>
             <img src="img/poliisi.jpg" height="150" width="300" alt="" />  <br>
 			<a class="" data-toggle="collapse" data-parent="#accordion" href="#p-rate">Arvostele!</a> <br>
-			<span id="arvostelut">rating</span>  <br>
+			<span id="arvostelut">rating <?php echo round($averageP,2) ?>/5</span>  <br>
 			<div class="collapse" id="p-rate">
 				<?php AsetaRavintola("poliisi");?>
 			</div>	
