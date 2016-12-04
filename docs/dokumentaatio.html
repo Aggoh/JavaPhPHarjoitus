@@ -12,18 +12,25 @@
 	</style>
 	<body>
 		<a href="../index.php">Etusivu</a>
-		<h1>Javascript ja php kurssien harjoitusty�n dokumentaatio</h1>
+		<h1>Javascript ja php kurssien harjoitustyön dokumentaatio</h1>
 		<h3>Veeti Karttunen, Niki Liuhanen, Aaro Lyytinen</h3>
 		
 		
-		<h2>Sis�lt�</h2>
+		<h2>Sisältö</h2>
 		<ol>
 			<li>Johdanto</li>
 			<li>Suunnitelma</li>
 			<li>Toteutus</li>
-			<li>Ty�skentely</li>
-			<ol>
-				<li>Yleinen</li>
+            <ol>
+                <li>JSON</li>
+				<li>Ulkoasu</li>
+                <li>Tietokannat</li>
+                <li>Register & Login</li>
+                <li>Arovstelu</li>
+                    
+            </ol>
+			<li>Työskentely</li>
+			<ol>				
 				<li>Aaro</li>
 				<li>Niki</li>
 				<li>Veeti</li>
@@ -39,23 +46,38 @@
 		
 		
 		<h2>1 Johdanto</h2>
-		<p>Ty�n aiheeksi valittiin verkkosivusto, joka hakee lounasravintoloiden ruokalistat ja esitt�� n�m� ruokalistat yhdell� sivustolla.
+		<p>Työn aiheeksi valittiin verkkosivusto, joka hakee lounasravintoloiden ruokalistat ja esittää nämä ruokalistat yhdellä sivustolla.
 		Aihe valittiin, koska lounaspaikan valitseminen on helpompaa jos voi nopeasti ja helposti vertailla eri ravintoloiden ruokia.
-		T�m� sivusto on tehty niin sanotusti omaan k�ytt��n ja t�ten sen ty�st�miseen on l�ytynyt paljon motivaatiota.
-		Sivuston ominaisuuksiin kuuluu muun muassa autentikointi, ravintoloiden arviointi, eri ravintoloiden valitseminen omaan k�ytt��n</p>
-		
+		Tämä sivusto on tehty niin sanotusti omaan käyttöön ja täten sen työstämiseen on löytynyt paljon motivaatiota.
+		Sivuston ominaisuuksiin kuuluu muun muassa autentikointi, ravintoloiden arviointi, eri ravintoloiden valitseminen omaan käyttöön</p><br>
 		
 		<h2>2 Suunnitelma</h2>
-		<p>Alkuper�inen suunnitelma oli tehd� ruokalistoja listaava sivu ja kehitt�� kyseist� ideaa pidemm�lle.</p>
-		
+		<p>Alkuperäinen suunnitelma oli tehdä ruokalistoja listaava sivu ja kehittää kyseistä ideaa pidemmälle.</p><br>
 		
 		<h2>3 Toteutus</h2>
-		<p>Ty�n toteutuksessa k�ytettiin javascripti�, jquery�, jsonia sek� php:t�.</p>
-		
-		
-		<h2>4 Ty�skentely</h2>
-		<h3>4.1 Yleinen</h3>
-		<p>Ty�h�n k�ytettiin noin 50 ty�tuntia. Useat osiot ty�ss� tehtiin yhdess�, erityisesti haastelliset ja ongelmalliset osa-alueet. </p>
+		<p>Työn toteutuksessa käytettiin javascriptiä, jqueryä, jsonia, bootstrap, mysql sekä php:tä. Aluksi loimme yksinkertaisen html-sivun, johon parsimme ladatut json tiedostot.</p>
+        
+        <h3>3.1 JSON</h3>
+        <p> Ensimmäinen haaste oli saada toimiva ratkaisu json-tiedostojen saamiseksi ja päivittämiseksi. Ensimmäinen versio, jolla toteutimme haun, oli yahoon API. Tämän osoittautuessä epävarmaksi, vaihdoimme yksinkertaiseen linuxilla toteutettuun bash scriptiin. Scripti haki lounaslistat ja tallennsi ne suoraan palvelimelle, hyödyntäen crontab- ja wget-komentoja. Toimivin ratkaisu saatiin php:llä luotu ohjelma, joka tietyn ajoin hakee lounaslistat suoraan palvelimelle.</p>
+        
+        <h3>3.2 Ulkoasu</h3>
+        <p>Sivun ulkoasunmuotoilu oli aikavievää, koska väri- ja tyylisilmä vastaa sokeata kyklooppia, mutta suhteellisen yksinkertaista. Ulkoasussa käytetty bootsrap ja css.</p>
+     
+        <h3>3.3 Tietokannat</h3>   
+        <p>Tietokannat luotiin sisäänkirjautumista, käyttäjäasetuksia ja arvosteluita varten. Tietokantoihin tuli kolme taulua, joista käyttäjän ja käyttä_asetusten välille käytimme viiteavainta.</p>
+        
+        <h3>3.4 Register & Login</h3>
+        <p>Rekisteröityminen sivuille tapahtuu kun käyttäjä syötää käyttäjätunnuksen ja salasanan rekisteröitymis-sivulla. Käyttäjänimen ja salasanan tulee molempien olla vähintään yhden merkin pituisia. Salasanoja saa olla useita samoja eri käyttäjillä, mutta käyttäjänimiä ei voi tietokannoissa olla kuin yksi (uniikki). Php-ohjelma tarkistaa tietokannoista ennen käyttäjätilin luomista onko käyttäjänimi jo olemassa. Salasana häshätään ja suolataan pharlib-kirjastolla jo luomis vaiheessa.</p>
+
+        <p>Sisäänkirjautuminen tapahtuu tietokantojen kautta, jossa tarkistetaan onko käyttäjätunnus ja salasana saman avaimen alla. Sisäänkirjautunut käyttäjän voi muokata omaa profiiliaan. Omassa profiilissa käyttäjä voi valita suosikki ravintolansa, vaihtaa salasanan tai tuhota käyttäjätunnuksensa. Suosikkiravintolat, jotka ovat valittu, tulevat näkyviin etusivun ravintoloiksi. Tämä, koska jos ravintoloita olisi satoja kappaleita, olisi suosiikien seuraaminen nopeampaa ja helpompaa.</p>
+        
+        <h3>3.5 Arvostelut</h3>
+        <p>Arvosteluissa tuli pystyä antamaan ravintolalle tähtiä, kirjallisen arvostelun ja näyttämään annettujen tähtien keskiarvon. 
+        Arvostelu toimii vain kirjautuneille käyttäjille, arvostelut tallennetaan ravintoloiden tietokantoihin, jossa voidaan näyttää esimerkiksi kaikki kirjoitetut arvostelut ja tähdet.
+        Arvostelu ei käytä hyväksi erillistä sivua, vaan bootsrap:in collapsen avulla luodun elementin kautta.</p><br>    
+    
+		<h2>4 Työskentely</h2>        		
+		<p>Työhön käytettiin noin 50 työtuntia. Useat osiot työssä tehtiin yhdessä, erityisesti haastelliset ja ongelmalliset osa-alueet. </p>
 		
 		<h3>4.2 Aaro</h3>
 		<p>Aaro suunnitteli sivun ulkoasun</p>
@@ -64,16 +86,16 @@
 		<p>Niki teki json tiedostojen haun.</p>
 		
 		<h3>4.4 Veeti</h3>
-		<p>Veeti ty�sti muun muassa viikonp�iv�palkkia, k�ytt�j�-asetuksia, ruokalistojen parsimista.</p>
+		<p>Veeti työsti muun muassa viikonpäiväpalkkia, käyttäjä-asetuksia, ruokalistojen parsimista.</p>
 		
 		<h3>4.5 Haasteet</h3>
-		<p>Yksi yll�tt�v� haaste oli lounasravintoloiden ruokalistojen l�yt�minen, sill� ravintolat harvemmin tarjoaa omia ruokalistojaan 
+		<p>Yksi yllättävä haaste oli lounasravintoloiden ruokalistojen löytäminen, sillä ravintolat harvemmin tarjoaa omia ruokalistojaan 
 		julkisesti json tai rss formaatissa. </p>
 		
 		
 		<h2>5 Itsearviointi</h2>
 		<h3>5.1 Aaro</h3>
-		<p></p>
+		<p>Vaatimattomasti 5/5 </p>
 		
 		<h3>5.2 Niki</h3>
 		<p></p>
