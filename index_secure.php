@@ -1,26 +1,17 @@
 <?php
-require_once('arviointi.php');
-require_once('/home/K7182/dbconfig/db-init.php');
-
-$statement = $db->query('SELECT AVG(rating) as average FROM arvostelut where ravintola="aimo"');
-$result = $statement->fetchObject();
-$averageA = $result->average;
-
-$statement = $db->query('SELECT AVG(rating) as average FROM arvostelut where ravintola="bitti"');
-$result = $statement->fetchObject();
-$averageB = $result->average;
-
-$statement = $db->query('SELECT AVG(rating) as average FROM arvostelut where ravintola="poliisi"');
-$result = $statement->fetchObject();
-$averageP = $result->average;
+require_once('php/functions.php');
+require_once('/home/K1565/dbconfig/db-init.php');
 ?>
 <html>
 <head>
 	<script src="js/lunch_menu.js"></script>
-	
 </head>
 <body onload="start()">
-<?php include('navbar.php');?>
+<?php include('navbar.php');
+if(isset($_SESSION['CurrentUser']) == 0){
+	header('Location: index.php');
+}
+?>
 	<section>
 	<ul class="col-md-12 lista nav nav-tabs">
 		<li role="presentation" class="vkp" id="1">
@@ -39,40 +30,43 @@ $averageP = $result->average;
 			<a onclick="navigate(5)" href="#/">Perjantai<br><span id="perjantai"></span></a>
 		</li>
 	</ul>
+	<?php
+	$sql = <<<SQLEND
+	SELECT ravintola FROM kayttaja_asetukset WHERE kayttaja_avain=(SELECT avain FROM kayttajat WHERE tunnus = ?)
+SQLEND;
+	$stmt = $db->prepare($sql);
+	$stmt->execute(array($_SESSION['CurrentUser']));
+	while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+		$output = <<<OUTPUTEND
 		<div class="col-md-4 col-xs-6 col-sm-4">
-			<h1>Aimo</h1>
-            <img src="img/aimo.jpg" height="150" width="300" alt="" /><br>			
-			<a class="" data-toggle="collapse" data-parent="#accordion" href="#a-rate">Arvostele!</a> <br>
-			<span id="arvostelut">rating <?php echo round($averageA,2) ?>/5</span> <br>
-			<div class="panel-collapse collapse" id="a-rate">
-				<?php AsetaRavintola("aimo");?>
+			<h1>{$row['ravintola']}</h1>
+            <img href="#collapse_{$row['ravintola']}" data-toggle="collapse" src="img/{$row['ravintola']}.jpg" height="150" width="300" alt="" /><br>			
+			<a class="" data-toggle="collapse" data-parent="#accordion" href="#{$row['ravintola']}-rate">Arvostele!</a> <br>
+			<a class="" data-toggle="collapse" href="#{$row['ravintola']}-lue">Lue arvosteluja</a> <br>
+OUTPUTEND;
+			$rsql = "SELECT AVG(rating) as average FROM arvostelut where ravintola='{$row['ravintola']}'";
+			$rstmt = $db->query($rsql);
+			$rrow = $rstmt->fetchObject();
+			$average = $rrow->average;
+			
+			echo $output;
+			echo round($average,2) . "/5 rating";
+			echo "<div class='panel-collapse collapse' id='{$row['ravintola']}-rate'>";
+			ArvosteleRavintola($row['ravintola']);
+			echo "</div><div class='panel-collapse collapse' id='{$row['ravintola']}-lue'><table>";
+			LueArvostelu($db, $row['ravintola']);
+			$output = <<<OUTPUTEND
+			</table>
 			</div>
-			<table align="center" id="aimo">
-			</table>
+			<div id="collapse_{$row['ravintola']}" class="collapse">
+				<table align="center" id="{$row['ravintola']}">
+				</table>
+			</div>
 		</div>
-		<div class="col-md-4 col-xs-6 col-sm-4">
-			<h1>Bittipannu</h1>
-            <img src="img/bitti.jpg" height="150" width="300" alt="" />  <br>
-			<a class="" data-toggle="collapse" data-parent="#accordion" href="#b-rate">Arvostele!</a> <br>
-			<span id="arvostelut">rating <?php echo round($averageB,2) ?>/5</span>  <br>
-			<div class="collapse" id="b-rate">
-				<?php AsetaRavintola("bitti");?>
-			</div>	
-			<table align="center" id="bitti">
-			</table>
-		</div>
-		<div class="col-md-4 col-xs-6 col-sm-4">
-			<h1>Poliisilaitos</h1>
-            <img src="img/poliisi.jpg" height="150" width="300" alt="" />  <br>
-			<a class="" data-toggle="collapse" data-parent="#accordion" href="#p-rate">Arvostele!</a> <br>
-			<span id="arvostelut">rating <?php echo round($averageP,2) ?>/5</span>  <br>
-			<div class="collapse" id="p-rate">
-				<?php AsetaRavintola("poliisi");?>
-			</div>	
-			<table align="center" id="poliisi">
-			</table>
-		</div>
-		
+OUTPUTEND;
+			echo $output;
+	}
+	?>		
 	</section>
 	<footer class="col-md-12">
 		<p><i class="fa fa-copyright fa-1x"></i>2016 Veeti Karttunen, Niki Liuhanen, Aaro Lyytinen</p>

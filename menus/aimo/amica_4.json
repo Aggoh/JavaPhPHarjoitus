@@ -5,7 +5,7 @@
   "Footer": "Tarkistathan tuoteseloste merkinnät linjastosta!",
   "MenusForDays": [
     {
-      "Date": "2016-11-11T00:00:00",
+      "Date": "2016-12-02T00:00:00",
       "LunchTime": "10.30-14.30",
       "SetMenus": [
         {
@@ -13,18 +13,16 @@
           "Name": "KASVISLOUNAS",
           "Price": "8,10€/2,60€",
           "Components": [
-            "Pinaattiohukaisia (* ,A)",
-            "Puolukkasurvosta (G ,L ,M ,Veg)",
-            "Keitettyjä perunoita (* ,G ,L ,M)"
+            "Quorn-papu-kasvispastaa (A ,L ,VS)"
           ]
         },
         {
           "SortOrder": 0,
-          "Name": "LOUNAS",
-          "Price": "8,10 €/ 2,60 €",
+          "Name": "LOUNAS III",
+          "Price": "8,10€/2,60€",
           "Components": [
-            "Broileria currykastikkeessa (* ,A ,G ,L)",
-            "Höyrytettyä tummaa riisiä (* ,G ,L ,M ,Veg)"
+            "Broileri-pekonikastiketta (* ,A ,G ,L ,VS)",
+            "Luomutäysjyväkierrepastaa (* ,A ,L ,M ,Veg)"
           ]
         },
         {
@@ -32,8 +30,8 @@
           "Name": "FRESH BUFFET",
           "Price": "17,20€/kg",
           "Components": [
-            "Salamiviipaleita ()",
-            "Kermajuustoa (A ,G ,L)"
+            "Kermajuustoa (A ,G ,L)",
+            "Teriyakimaustettua lohta (A ,G ,L ,M)"
           ]
         },
         {
@@ -41,10 +39,10 @@
           "Name": "LOUNAS III",
           "Price": "9,00€/4,90€",
           "Components": [
-            "Etikkakurkkua ()",
-            "Riistakäristystä (* ,G ,L ,M)",
-            "Puolukkasurvosta (G ,L ,M ,Veg)",
-            "Perunasosetta (* ,A ,G ,L)"
+            "Jeeralla maustettua porsaanfileetä (* ,G ,L ,M)",
+            "Jogurttia (* ,A ,G ,L)",
+            "Vihanneskuskusia (A ,L ,M)",
+            "Baba Ganoush -munakoisotahnaa (A ,G ,L ,M ,Veg ,VS)"
           ]
         },
         {
@@ -52,19 +50,18 @@
           "Name": "JÄLKIRUOKA",
           "Price": "1,60€",
           "Components": [
-            "Uunibanaania (G ,L ,M ,Veg)",
-            "Mantelikermavaahtoa (A ,G ,L)"
+            "Limerahkaa (A ,G ,L)"
           ]
         }
       ]
     },
     {
-      "Date": "2016-11-12T00:00:00",
+      "Date": "2016-12-03T00:00:00",
       "LunchTime": null,
       "SetMenus": []
     },
     {
-      "Date": "2016-11-13T00:00:00",
+      "Date": "2016-12-04T00:00:00",
       "LunchTime": null,
       "SetMenus": []
     }

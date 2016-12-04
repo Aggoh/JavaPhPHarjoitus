@@ -1,6 +1,6 @@
 <?php
-require_once('/home/K7182/dbconfig/db-init.php');
-require_once("/home/K7182/pwconfig/PasswordLib.phar");
+require_once('/home/K1565/dbconfig/db-init.php');
+require_once("/home/K1565/pwconfig/PasswordLib.phar");
 $lib = new PasswordLib\PasswordLib();
 
 $tunnus   = isset($_REQUEST['tunnus'])   ? $_REQUEST['tunnus']   : '';
@@ -21,7 +21,7 @@ if(preg_match("/.+/",$tunnus) AND preg_match("/.+/",$salasana)){
 		echo '<script language="javascript">';
 		echo 'alert("Username taken, choose another one.")';
 		echo '</script>';
-		include 'empty_form.php';
+		echo "<script>setTimeout(\"location.href ='../empty_form.php'; \",1500);</script>";
 	}
 	else{ 
 		echo '<script language="javascript">';
@@ -32,14 +32,14 @@ if(preg_match("/.+/",$tunnus) AND preg_match("/.+/",$salasana)){
 		':f1' => $tunnus, 
 		':f2' => $hash));
 		echo $stmt->rowCount() . "Succesfully created!";
-		include('../indeex.php');
+		header('Location: ../success.php');
 	}
 }
 else {
 	echo '<script language="javascript">';
 	echo 'alert("Username/password needs to be at least 1 character long.")';
 	echo '</script>';
-	include('empty_form.php');
+	header('Location: ../empty_form.php');
 }
 
 

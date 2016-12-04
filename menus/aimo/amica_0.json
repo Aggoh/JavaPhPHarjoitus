@@ -5,7 +5,7 @@
   "Footer": "Tarkistathan tuoteseloste merkinnät linjastosta!",
   "MenusForDays": [
     {
-      "Date": "2016-11-07T00:00:00",
+      "Date": "2016-11-28T00:00:00",
       "LunchTime": "10.30-14.30",
       "SetMenus": [
         {
@@ -13,15 +13,7 @@
           "Name": "KASVISLOUNAS",
           "Price": "8,10€/2,60€",
           "Components": [
-            "Kasvis-perunapannua (* ,A ,G ,L)"
-          ]
-        },
-        {
-          "SortOrder": 0,
-          "Name": "KEITTOLOUNAS",
-          "Price": "6,80€/2,60€",
-          "Components": [
-            "Porkkanasosekeittoa (* ,A ,G ,L)"
+            "Kasviskiusausta (A ,G ,L)"
           ]
         },
         {
@@ -29,8 +21,8 @@
           "Name": "LOUNAS",
           "Price": "8,10 €/ 2,60 €",
           "Components": [
-            "Kalkkunaa ja kasviksia inkiväärikastikkeessa (* ,A ,G ,L ,M)",
-            "Basmatiriisiä (G ,L ,M ,Veg)"
+            "Kalkkunaa rakuunakastikkeessa (* ,A ,G ,L)",
+            "Täysjyvävehnää (* ,A ,L ,M)"
           ]
         },
         {
@@ -47,10 +39,9 @@
           "Name": "LOUNAS III",
           "Price": "9,00€/4,90€",
           "Components": [
-            "Porsaan grillipihvi (G ,L ,M)",
-            "Cafe de Paris -maustevoita (A ,VL ,VS)",
-            "Rosmariini-viipaleperunoita (* ,G ,L ,M ,Veg)",
-            "Höyrytettyjä porkkanoita (A ,G ,VL)"
+            "Lohta tandoori-smetanakastikkeessa (A ,G ,L)",
+            "Persiljaperunoita (* ,G ,L ,M ,Veg)",
+            "Paahdettua kesäkurpitsaa (G ,L ,M ,Veg ,VS)"
           ]
         },
         {
@@ -58,13 +49,13 @@
           "Name": "JÄLKIRUOKA",
           "Price": "1,60€",
           "Components": [
-            "Kuningatarjogurttia (A ,G ,L)"
+            "Banaani-appelsiinilassi (A ,G ,L)"
           ]
         }
       ]
     },
     {
-      "Date": "2016-11-08T00:00:00",
+      "Date": "2016-11-29T00:00:00",
       "LunchTime": "10.30-14.30",
       "SetMenus": [
         {
@@ -72,8 +63,8 @@
           "Name": "KASVISLOUNAS",
           "Price": "8,10€/2,60€",
           "Components": [
-            "Kasviksia chilikastikkeessa (* ,A ,G ,L ,M ,Veg)",
-            "Höyrytettyä tummaa riisiä (* ,G ,L ,M ,Veg)"
+            "Luomutofua ja kasviksia kormakastikkeessa  (* ,A ,G ,L ,VS)",
+            "Basmatiriisiä (G ,L ,M ,Veg)"
           ]
         },
         {
@@ -81,7 +72,8 @@
           "Name": "LOUNAS III",
           "Price": "8,10€/2,60€",
           "Components": [
-            "Uunimakkara sipuli-juustotäytteellä (A ,G ,L)",
+            "Tartarkastiketta (A ,G ,L ,M)",
+            "Rapeita kalapaloja (* ,A ,L ,M)",
             "Perunasosetta (* ,A ,G ,L)"
           ]
         },
@@ -91,61 +83,6 @@
           "Price": "17,20€/kg",
           "Components": [
             "Leipäjuustoa (A ,G ,L)",
-            "Etikkamarinoituja silakkapihvejä (A ,M)"
-          ]
-        },
-        {
-          "SortOrder": 0,
-          "Name": "LOUNAS III",
-          "Price": "9,00€/4,90€",
-          "Components": [
-            "Paistettu broilerileike (* ,A ,L ,M)",
-            "BBQ-kastiketta (* ,A ,G ,L ,M)",
-            "Ananaschutneytä (G ,L ,M ,Veg ,VS)",
-            "Porkkana, oranssi-keltainen pala, kypsä ()",
-            "Höyrytettyä tummaa riisiä (* ,G ,L ,M ,Veg)"
-          ]
-        },
-        {
-          "SortOrder": 0,
-          "Name": "JÄLKIRUOKA",
-          "Price": "1,60€",
-          "Components": [
-            "Mangopannacottaa (A ,G ,L)"
-          ]
-        }
-      ]
-    },
-    {
-      "Date": "2016-11-09T00:00:00",
-      "LunchTime": "10.30-14.30",
-      "SetMenus": [
-        {
-          "SortOrder": 0,
-          "Name": "KASVISLOUNAS",
-          "Price": "8,10€/2,60€",
-          "Components": [
-            "Soija-kasvistortilloja (* ,A ,L ,M ,Veg ,VS)",
-            "Kurkkusalsaa (* ,A ,G ,L ,M ,Veg ,VS)",
-            "Höyrytettyä tummaa riisiä (* ,G ,L ,M ,Veg)"
-          ]
-        },
-        {
-          "SortOrder": 0,
-          "Name": "LOUNAS II",
-          "Price": "8,10€/2,60",
-          "Components": [
-            "Jauhelihapyöryköitä (A ,L ,M)",
-            "Ruskeaa kastiketta (A ,L)",
-            "Paahdettuja lohkoperunoita (* ,G ,L ,M ,Veg)"
-          ]
-        },
-        {
-          "SortOrder": 0,
-          "Name": "FRESH BUFFET",
-          "Price": "17,20€/kg",
-          "Components": [
-            "Kolatun vuohen cheddar -juustoa (A ,L)",
             "Paahdettu broilerinfilee (* ,G ,L ,M)"
           ]
         },
@@ -154,10 +91,10 @@
           "Name": "LOUNAS III",
           "Price": "9,00€/4,90€",
           "Components": [
-            "Paistettua kampelafileetä (* ,A ,L ,M)",
-            "Tartarkastiketta (A ,G ,L)",
-            "Tilliperunoita (* ,G ,L ,M)",
-            "Paahdettua punajuurta (G ,L ,M ,Veg)"
+            "Basmatiriisiä (G ,L ,M ,Veg)",
+            "Paahdettu broilerinfilee (G ,L ,M)",
+            "Basilikakastiketta (* ,A ,G ,L ,VS)",
+            "Grillitomaatti (* ,G ,L ,M ,Veg)"
           ]
         },
         {
@@ -165,13 +102,14 @@
           "Name": "JÄLKIRUOKA",
           "Price": "1,60€",
           "Components": [
-            "Lakritsimoussea (A ,L)"
+            "Omena-luomukaurapaistosta (A ,L ,M)",
+            "Kanelikermavaahtoa (A ,G ,L)"
           ]
         }
       ]
     },
     {
-      "Date": "2016-11-10T00:00:00",
+      "Date": "2016-11-30T00:00:00",
       "LunchTime": "10.30-14.30",
       "SetMenus": [
         {
@@ -179,70 +117,25 @@
           "Name": "KASVISLOUNAS",
           "Price": "8,10€/2,60€",
           "Components": [
-            "Juurespihvejä (* ,A ,G ,L ,M ,VS)",
-            "Jogurtti-basilikakastiketta (A ,G ,L)",
-            "Keitettyjä perunoita (* ,G ,L ,M)"
+            "Feta-pinaattipihvejä (A ,VL ,VS)",
+            "Ruohosipulikermaviilikastiketta (A ,G ,L)",
+            "Keitettyjä perunoita (* ,G ,L ,M ,Veg)"
           ]
         },
         {
           "SortOrder": 0,
-          "Name": "LOUNAS III",
-          "Price": "8,10€/2,60€",
+          "Name": "KEITTOLOUNAS",
+          "Price": "6,80€/2,60€",
           "Components": [
-            "Itämaista porsaanliha-kasvispataa (A ,G ,L ,M)",
-            "Nuudeleita (A ,L ,M)"
+            "Juustoista porkkanasosekeittoa (* ,A ,G ,L)"
           ]
         },
         {
           "SortOrder": 0,
-          "Name": "FRESH BUFFET",
-          "Price": "17,20€/kg",
+          "Name": "LOUNAS II",
+          "Price": "8,10€/2,60",
           "Components": [
-            "Lämminsavulohta (G ,L ,M)",
-            "Munakokkelia (A ,G ,L)"
-          ]
-        },
-        {
-          "SortOrder": 0,
-          "Name": "LOUNAS III",
-          "Price": "9,00€/4,90€",
-          "Components": [
-            "Kanaa Kiovan tapaan (A ,VL ,VS)",
-            "Bearnaisekastiketta (A ,G)",
-            "Perunasosetta (* ,A ,G ,L)",
-            "Hunaja-kirveliporkkanoita (A ,G ,VL)"
-          ]
-        },
-        {
-          "SortOrder": 0,
-          "Name": "JÄLKIRUOKA",
-          "Price": "1,60€",
-          "Components": [
-            "Talkkunahyvettä (A ,L)"
-          ]
-        }
-      ]
-    },
-    {
-      "Date": "2016-11-11T00:00:00",
-      "LunchTime": "10.30-14.30",
-      "SetMenus": [
-        {
-          "SortOrder": 0,
-          "Name": "KASVISLOUNAS",
-          "Price": "8,10€/2,60€",
-          "Components": [
-            "Pinaattiohukaisia (* ,A)",
-            "Puolukkasurvosta (G ,L ,M ,Veg)",
-            "Keitettyjä perunoita (* ,G ,L ,M)"
-          ]
-        },
-        {
-          "SortOrder": 0,
-          "Name": "LOUNAS",
-          "Price": "8,10 €/ 2,60 €",
-          "Components": [
-            "Broileria currykastikkeessa (* ,A ,G ,L)",
+            "Härkää curry-inkiväärikastikkeessa (* ,A ,G ,L ,M ,VS)",
             "Höyrytettyä tummaa riisiä (* ,G ,L ,M ,Veg)"
           ]
         },
@@ -251,8 +144,8 @@
           "Name": "FRESH BUFFET",
           "Price": "17,20€/kg",
           "Components": [
-            "Salamiviipaleita ()",
-            "Kermajuustoa (A ,G ,L)"
+            "Kolatun vuohen cheddar -juustoa (A ,L)",
+            "Chilimaustettua lohta (A ,G ,L ,M)"
           ]
         },
         {
@@ -260,10 +153,7 @@
           "Name": "LOUNAS III",
           "Price": "9,00€/4,90€",
           "Components": [
-            "Etikkakurkkua ()",
-            "Riistakäristystä (* ,G ,L ,M)",
-            "Puolukkasurvosta (G ,L ,M ,Veg)",
-            "Perunasosetta (* ,A ,G ,L)"
+            "Metsästäjänleipä (A ,L)"
           ]
         },
         {
@@ -271,19 +161,124 @@
           "Name": "JÄLKIRUOKA",
           "Price": "1,60€",
           "Components": [
-            "Uunibanaania (G ,L ,M ,Veg)",
-            "Mantelikermavaahtoa (A ,G ,L)"
+            "Mansikkakiisseliä (G ,L ,M)",
+            "Vaniljakermavaahtoa (A ,G ,L)"
           ]
         }
       ]
     },
     {
-      "Date": "2016-11-12T00:00:00",
+      "Date": "2016-12-01T00:00:00",
+      "LunchTime": "10.30-14.30",
+      "SetMenus": [
+        {
+          "SortOrder": 0,
+          "Name": "KASVISLOUNAS",
+          "Price": "8,10€/2,60€",
+          "Components": [
+            "Porkkanaohukaisia (* ,A)",
+            "Puolukkahilloa (G ,L ,M ,Veg)",
+            "Keitettyjä perunoita (* ,G ,L ,M ,Veg)"
+          ]
+        },
+        {
+          "SortOrder": 0,
+          "Name": "LOUNAS II",
+          "Price": "8,10€/2,60",
+          "Components": [
+            "Jauheliha-chilikastiketta (* ,A ,L ,M)",
+            "Höyrytettyä tummaa riisiä (* ,G ,L ,M ,Veg)"
+          ]
+        },
+        {
+          "SortOrder": 0,
+          "Name": "FRESH BUFFET",
+          "Price": "17,20€/kg",
+          "Components": [
+            "Valkohomejuustoa (A ,G ,L)",
+            "Yrttimaustettua porsaanfileetä (* ,G ,L ,M)"
+          ]
+        },
+        {
+          "SortOrder": 0,
+          "Name": "LOUNAS III",
+          "Price": "9,00€/4,90€",
+          "Components": [
+            "Paistettuja muikkuja (A ,L ,M)",
+            "Tillikermaviilikastiketta (A ,G ,L)",
+            "Perunasosetta (* ,A ,G ,L)",
+            "Sitruunalohko (G ,L ,M ,Veg)"
+          ]
+        },
+        {
+          "SortOrder": 0,
+          "Name": "JÄLKIRUOKA",
+          "Price": "1,60€",
+          "Components": [
+            "Appelsiinivaahtoa (A ,G ,L)",
+            "Appelsiinivohveli (A)"
+          ]
+        }
+      ]
+    },
+    {
+      "Date": "2016-12-02T00:00:00",
+      "LunchTime": "10.30-14.30",
+      "SetMenus": [
+        {
+          "SortOrder": 0,
+          "Name": "KASVISLOUNAS",
+          "Price": "8,10€/2,60€",
+          "Components": [
+            "Quorn-papu-kasvispastaa (A ,L ,VS)"
+          ]
+        },
+        {
+          "SortOrder": 0,
+          "Name": "LOUNAS III",
+          "Price": "8,10€/2,60€",
+          "Components": [
+            "Broileri-pekonikastiketta (* ,A ,G ,L ,VS)",
+            "Luomutäysjyväkierrepastaa (* ,A ,L ,M ,Veg)"
+          ]
+        },
+        {
+          "SortOrder": 0,
+          "Name": "FRESH BUFFET",
+          "Price": "17,20€/kg",
+          "Components": [
+            "Kermajuustoa (A ,G ,L)",
+            "Teriyakimaustettua lohta (A ,G ,L ,M)"
+          ]
+        },
+        {
+          "SortOrder": 0,
+          "Name": "LOUNAS III",
+          "Price": "9,00€/4,90€",
+          "Components": [
+            "Jeeralla maustettua porsaanfileetä (* ,G ,L ,M)",
+            "Jogurttia (* ,A ,G ,L)",
+            "Vihanneskuskusia (A ,L ,M)",
+            "Baba Ganoush -munakoisotahnaa (A ,G ,L ,M ,Veg ,VS)"
+          ]
+        },
+        {
+          "SortOrder": 0,
+          "Name": "JÄLKIRUOKA",
+          "Price": "1,60€",
+          "Components": [
+            "Limerahkaa (A ,G ,L)"
+          ]
+        }
+      ]
+    },
+    {
+      "Date": "2016-12-03T00:00:00",
       "LunchTime": null,
       "SetMenus": []
     },
     {
-      "Date": "2016-11-13T00:00:00",
+      "Date": "2016-12-04T00:00:00",
       "LunchTime": null,
       "SetMenus": []
     }
