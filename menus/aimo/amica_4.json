@@ -5,7 +5,7 @@
   "Footer": "Tarkistathan tuoteseloste merkinnät linjastosta!",
   "MenusForDays": [
     {
-      "Date": "2016-11-11T00:00:00",
+      "Date": "2016-12-09T00:00:00",
       "LunchTime": "10.30-14.30",
       "SetMenus": [
         {
@@ -13,18 +13,26 @@
           "Name": "KASVISLOUNAS",
           "Price": "8,10€/2,60€",
           "Components": [
-            "Pinaattiohukaisia (* ,A)",
-            "Puolukkasurvosta (G ,L ,M ,Veg)",
-            "Keitettyjä perunoita (* ,G ,L ,M)"
+            "Tahu goreng Indonesia (A ,G ,L ,M ,Veg ,VS)",
+            "Höyrytettyä tummaa riisiä (* ,G ,L ,M ,Veg)"
           ]
         },
         {
           "SortOrder": 0,
-          "Name": "LOUNAS",
-          "Price": "8,10 €/ 2,60 €",
+          "Name": "KEITTOLOUNAS",
+          "Price": "6,80€/2,60€",
           "Components": [
-            "Broileria currykastikkeessa (* ,A ,G ,L)",
-            "Höyrytettyä tummaa riisiä (* ,G ,L ,M ,Veg)"
+            "Tomaattikeittoa (* ,A ,L)"
+          ]
+        },
+        {
+          "SortOrder": 0,
+          "Name": "LOUNAS III",
+          "Price": "8,10€/2,60€",
+          "Components": [
+            "Pekoninakkeja (G ,L ,M)",
+            "Sinappikastiketta (* ,A ,G ,L)",
+            "Perunasosetta (* ,A ,G ,L)"
           ]
         },
         {
@@ -32,8 +40,8 @@
           "Name": "FRESH BUFFET",
           "Price": "17,20€/kg",
           "Components": [
-            "Salamiviipaleita ()",
-            "Kermajuustoa (A ,G ,L)"
+            "Sinihomejuustoa (A ,G ,L)",
+            "BBQ broileria (A ,G ,L ,M)"
           ]
         },
         {
@@ -41,10 +49,9 @@
           "Name": "LOUNAS III",
           "Price": "9,00€/4,90€",
           "Components": [
-            "Etikkakurkkua ()",
-            "Riistakäristystä (* ,G ,L ,M)",
-            "Puolukkasurvosta (G ,L ,M ,Veg)",
-            "Perunasosetta (* ,A ,G ,L)"
+            "Smetanakirjolohta ja kesäkurpitsaa (* ,A ,G ,L)",
+            "Tilliperunoita (* ,G ,L ,M ,Veg)",
+            "Parsakaalia (G ,L ,M ,Veg)"
           ]
         },
         {
@@ -52,19 +59,18 @@
           "Name": "JÄLKIRUOKA",
           "Price": "1,60€",
           "Components": [
-            "Uunibanaania (G ,L ,M ,Veg)",
-            "Mantelikermavaahtoa (A ,G ,L)"
+            "Appelsiiniriisiä (A ,G ,L)"
           ]
         }
       ]
     },
     {
-      "Date": "2016-11-12T00:00:00",
+      "Date": "2016-12-10T00:00:00",
       "LunchTime": null,
       "SetMenus": []
     },
     {
-      "Date": "2016-11-13T00:00:00",
+      "Date": "2016-12-11T00:00:00",
       "LunchTime": null,
       "SetMenus": []
     }

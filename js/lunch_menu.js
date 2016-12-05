@@ -8,7 +8,6 @@ for(var i = 0; i < 5; i++) {
 	urlArray.push(bitti);
 	urlArray.push(poliisi);
 }
-
 function start() {
 	var date = new Date();
 	setViikonPaivat();
@@ -39,10 +38,9 @@ function navigate(index) {
 	
 	var paikat= ["aimo", "bitti", "poliisi"];
 	var element = "";
-	
 	for (var value of paikat) {
 		element = document.getElementById(value);
-		element.innerHTML = null;
+		if(element != null) element.innerHTML = null;
 	}
 	
 	for(var value of urlArray){
@@ -52,14 +50,32 @@ function navigate(index) {
 	}
 }
 
+function navigateProfile(index) {
+	var inactive = document.getElementById(1);
+	inactive.setAttribute("class","");
+	var inactive = document.getElementById(2);
+	inactive.setAttribute("class","");
+	 var active = document.getElementById(index);
+	 active.setAttribute("class", "active");
+	 
+	 if (index == 1) {
+		 
+	 }
+	 else {
+		 
+	 }
+}
+
 function setViikonPaivat() {
 	
 	var viikonpaiva = ["maanantai" , "tiistai", "keskiviikko", "torstai", "perjantai"];
 	
 	var date = new Date();
-	
-	var active = document.getElementById(date.getDay()); //hakee navbarin tämänhetkisen viikonpäivän
-	active.setAttribute("class" , "vkp active"); // asettaa lista elementin aktiiviseksi
+	var ehto = date.getDay();
+	if(ehto <= 5 && ehto != 0) {
+		var active = document.getElementById(ehto); //hakee navbarin tämänhetkisen viikonpäivän
+		active.setAttribute("class" , "vkp active"); // asettaa lista elementin aktiiviseksi
+	}
 	
 	var temp_date = date.getDate()-date.getDay()+1; //hakee kyseisen viikon maanantain
 	
@@ -67,11 +83,10 @@ function setViikonPaivat() {
 	temp_date = date.getDate();
 	
 	for(var i = 0;i<5;i++) { //asetetaan viikonpäivien päivämäärät
-		
 		var weekday = document.getElementById(viikonpaiva[i])
 		date.setDate(temp_date+i);
 		
-		if(date.getDate() < (temp_date+i)) temp_date = 0; //tsekkaa onko kuukausi vaihtunut välissä
+		if(date.getDate() < (temp_date+i)) temp_date = 1 - i; //tsekkaa onko kuukausi vaihtunut välissä
 		weekday.innerHTML = date.getDate() + "." + (date.getMonth() + 1); //asettaa span elementin sisälle viikonpäivän pvm:n
 	}
 }
@@ -98,48 +113,11 @@ function loadJSON(url) {
 			}
 		}
 	});
-	/*
-	if(url.search("amica") != -1){
-		for(var i = 0; i < response.MenusForDays.length; i++) {
-			for(var j = 0; j < response.MenusForDays.SetMenus.length; j++) {
-				naytaAimo(i, j);
-			}
-		}
-	}*/
-	
-	/*try {
-		
-		if(data.meta.ref_title == "JAMK Ravintola Bittipannu \/ Dynamo") {
-			ruokalista = data.courses;
-			console.log("Bittipannu");
-			for(var i = 0; i<ruokalista.length;i++) {
-				naytaBitti(i);
-			}
-		}
-		else {
-			console.log("pollarit");
-			ruokalista = data.courses;
-			for(var i = 0; i<ruokalista.length;i++) {
-				naytaPoliisi(i);
-			}
-		}
-	}
-	
-	catch(err) {
-		if(data.MenusForDays) {
-			ruokalista = data.MenusForDays;
-			for (var i=0;i<ruokalista.length;i++) {
-				for(var j=0;i<ruokalista[i].SetMenus.length;j++) {
-					naytaAimo(response, i, j);
-				}
-			}
-		}
-	}*/
 }
 
 function naytaAimo(index){
 	// uusi div	
-	console.log(ruokalista);
+	//console.log(ruokalista);
 	//console.log(index);
 	//console.log(ruokalista[0].SetMenus[index].Name);
 	
@@ -166,7 +144,6 @@ function naytaAimo(index){
 	var array = ruokalista[index].Components;
 	if(Object.prototype.toString.call(array) === '[object Array]') //tarkistaa onko muuttuja lista
 	{
-		console.log("true");
 		for (var i = 0; i < array.length; i++) {
 			td3.appendChild(document.createTextNode(array[i]));
 			td3.appendChild(document.createElement("br"));
